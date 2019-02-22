@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon } from 'antd';
-import './Sider.css'
+import CardList from './CardList';
 
 const { Header, Sider, Footer, Content } = Layout;
 
@@ -46,21 +46,10 @@ class SiderDemo extends Component {
         </Sider>
         <Layout style={{ marginLeft: 200 }}>
           <Header style={{ background: '#fff', padding: 0 }} />
-          <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-            <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
-              ...
-              <br />
-              Really
-              <br />...<br />...<br />...<br />
-              long
-              <br />...<br />...<br />...<br />...<br />...<br />...
-              <br />...<br />...<br />...<br />...<br />...<br />...
-              <br />...<br />...<br />...<br />...<br />...<br />...
-              <br />...<br />...<br />...<br />...<br />...<br />...
-              <br />...<br />...<br />...<br />...<br />...<br />...
-              <br />...<br />...<br />...<br />...<br />...<br />...
-              <br />...<br />...<br />...<br />...<br />...<br />
-              content
+          <Content style={{ margin: '24px 16px 0'}}>
+            <div style={{ padding: 24, background: '#fff'}}>
+              <CardList />
+
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
