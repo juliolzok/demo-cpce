@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-  Drawer, List, Avatar, Divider, Col, Row, Button,
+  Drawer, List, Avatar, Divider, Col, Row, Button, Input
 } from 'antd';
 import NewM from './NewM';
 
@@ -11,6 +11,7 @@ const pStyle = {
   display: 'block',
   marginBottom: 16,
 };
+
 
 const DescriptionItem = ({ title, content }) => (
   <div
@@ -33,6 +34,8 @@ const DescriptionItem = ({ title, content }) => (
     {content}
   </div>
 );
+const InputGroup = Input.Group;
+const Search = Input.Search;
 
 export default class CardList extends Component {
   state = { visible: false };
@@ -52,7 +55,19 @@ export default class CardList extends Component {
   render() {
     return (
       <div>
-        <NewM />
+        <InputGroup size="large">
+          <Col span={2}>
+            <NewM /> 
+          </Col>
+          <Col span={8}>
+             <Search style={{width: "90vh" }}
+          placeholder="buscar"
+          onSearch={value => console.log(value)}
+          enterButton size="large"
+        />
+          </Col>
+        </InputGroup>
+           
         <List
           dataSource={[
             {

@@ -20,7 +20,7 @@ class SiderDemo extends Component {
               background: 'rgba(255,255,255,.2)',
               margin: '16px'
           }} />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={['2']}>
             <Menu.Item key="1">
               <Icon type="exception" />
               <span className="nav-text">Certificacion</span>
@@ -45,14 +45,16 @@ class SiderDemo extends Component {
           </Menu>
         </Sider>
         <Layout style={{ marginLeft: 200 }}>
-          <Header style={{ background: '#fff', padding: 0 }} />
+          <Header style={{ background: '#fff', padding: 0 }}>
+         
+          </Header>
           <Content style={{ margin: '24px 16px 0'}}>
             <div style={{ padding: 24, background: '#fff'}}>
               <CardList />
 
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>
+          <Footer style={{ textAlign: 'center', position: "auto" }}>
             Todos los derechos reservados 2019 Deeploy &copy;
           </Footer>
         </Layout>

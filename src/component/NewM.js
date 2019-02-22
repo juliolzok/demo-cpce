@@ -37,7 +37,13 @@ import Images from './Images';
               <Form.Item label="Numero">
                 {getFieldDecorator('Numero')(<Input type='number' size="small" />)}
               </Form.Item>
-             <Images />
+              <Form.Item label="Foto">
+                {getFieldDecorator('Foto')( <Images />)}
+              </Form.Item>
+              <Form.Item label="Firma">
+                {getFieldDecorator('Firma')( <Images />)}
+              </Form.Item>
+            
             </Form>
           </Modal>
         );
